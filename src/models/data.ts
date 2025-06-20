@@ -1,12 +1,16 @@
 import mongoose from 'mongoose';
 
 const VerificationSchema = new mongoose.Schema({
-  name: { type: String },
+  name: String,
   bankAccount: { type: String, required: true },
   ifsc: { type: String, required: true },
-  phone: { type: String },
-  userId: { type: String },
+  bankName: String,
+  branch: String,
+  city: String,
+  phone: String,
+  userId: String,
   status: { type: String, default: 'PENDING' },
+  reason: String,
   createdAt: { type: Date, default: Date.now },
 });
 
